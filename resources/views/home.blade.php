@@ -82,8 +82,8 @@
     <!-- Hero Section -->
     <section class="hero-section">
         <div class="container">
-            <h1 class="display-6 mb-2">Welcome Aboard!</h1>
-            <p class="lead mb-0">A simple and elegant app using Bootstrap 5 and Laravel Blade.</p>
+            <h1 class="display-6 mb-2">{{$username}}</h1>
+            <p class="lead mb-0">{{$last_login}}</p>
         </div>
     </section>
 
@@ -138,9 +138,11 @@
                             <span class="badge text-bg-danger">Bootstrap</span>
                         </div>
                         <ul class="list-group mb-3">
-                            <li class="list-group-item">Item Satu</li>
-                            <li class="list-group-item">Item Dua</li>
-                            <li class="list-group-item">Item Tiga</li>
+
+                            @foreach($list_pendidikan as $item)
+                            <li class="list-group-item"> {{$item}}</li>
+                            @endforeach
+                            
                         </ul>
                         <div class="p-3 border rounded">
                             <strong>Div umum</strong> — ini hanya <em>container</em> untuk konten bebas.
