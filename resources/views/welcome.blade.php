@@ -116,7 +116,7 @@
                                 Deploy now
                             </a>
                             ...
-<a href="{{ route('mahasiswa.show') }}">Klik Disini</a>
+{{-- <a href="{{ route('mahasiswa.show') }}">Klik Disini</a> --}}
 
 ...
                         </li>
