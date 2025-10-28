@@ -1,9 +1,5 @@
-       @extends ('layouts.admin.app')
+<!--
 
-<<<<<<< HEAD:resources/views/admin/pelanggan/index.blade.php
-       @section('title', 'Daftar Pelanggan')
-       @section ('content')
-=======
 =========================================================
 * Volt Pro - Premium Bootstrap 5 Dashboard
 =========================================================
@@ -334,9 +330,7 @@
                 </div>
             </div>
         </nav>
->>>>>>> f2863a68db9bec6d2e472fc75c7316e0400934ad:resources/views/admin/warga/index.blade.php
 
-       {{-- Start Content --}}
         <div class="py-4">
             <nav aria-label="breadcrumb" class="d-none d-md-inline-block">
                 <ol class="breadcrumb breadcrumb-dark breadcrumb-transparent">
@@ -364,11 +358,6 @@
                 </div>
             </div>
         </div>
-        @if (session('success'))
-            <div class="alert alert-success">
-                {{ session('success') }}
-            </div>
-        @endif
 
         <div class="row">
     <div class="col-12 mb-4">
@@ -437,10 +426,6 @@
                 </div>
             </div>
         </div>
-<<<<<<< HEAD:resources/views/admin/pelanggan/index.blade.php
-        {{-- End Content --}}
-         @endsection
-=======
     </div>
 </div>
 
@@ -482,4 +467,3 @@
 </body>
 
 </html>
->>>>>>> f2863a68db9bec6d2e472fc75c7316e0400934ad:resources/views/admin/warga/index.blade.php

@@ -5,10 +5,8 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UsersController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\MahasiswaController;
+use App\Http\Controllers\PelangganController;
 use App\Http\Controllers\WargaController;
-
-
-Route::resource('warga', WargaController::class);
 
 Route::get('/', function () {
     return view('welcome');
@@ -40,7 +38,7 @@ Route::post('question/store', [QuestionController::class, 'store'])
 
 Route::get('/home',[HomeController::class, 'index'])->name('home');
 
-Route::get('/home',[HomeController::class, 'index'])->name('home');
+Route::resource('pelanggan', PelangganController::class);
 
 Route::resource('warga', WargaController::class);
 

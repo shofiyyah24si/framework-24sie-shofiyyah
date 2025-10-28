@@ -77,7 +77,7 @@ class WargaController extends Controller
 
         $warga->save();
 
-        return redirect()->route('warga.index') ->with('update', 'Perubahan Data Berhasil!');
+        return redirect()->route('warga.index') ->with('success', 'Perubahan Data Berhasil!');
     }
 
     /**

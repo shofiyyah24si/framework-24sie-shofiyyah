@@ -1,6 +1,6 @@
 @extends('layouts.admin.app')
 
-@section('title', 'Edit Pelanggan')
+@section('title', 'Edit User')
 
 @section('content')
     <div class="py-4">

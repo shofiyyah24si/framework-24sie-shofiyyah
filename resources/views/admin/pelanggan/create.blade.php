@@ -104,7 +104,7 @@
                 </li>
                 <!-- Tambahkan blok kode ini by shofiyyah -->
                 <li class="nav-item  active ">
-                    <a href="{{ route('warga.index')}}" class="nav-link">
+                    <a href="{{ route('pelanggan.index')}}" class="nav-link">
                         <span class="sidebar-icon">
                             <svg class="icon icon-xs me-2" data-slot="icon" fill="none" stroke-width="1.5"
                                 stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"
@@ -114,7 +114,7 @@
                                 </path>
                             </svg>
                         </span>
-                        <span class="sidebar-text">Warga</span>
+                        <span class="sidebar-text">Pelanggan</span>
                     </a>
                 </li>
                 {{-- <li class="nav-item  active ">
@@ -140,7 +140,7 @@
                                 </path>
                             </svg>
                         </span>
-                        <span class="sidebar-text">Warga</span>
+                        <span class="sidebar-text">Pelanggan</span>
                     </a>
                 </li>
                 <li role="separator" class="dropdown-divider mt-4 mb-3 border-gray-700"></li>
@@ -357,17 +357,17 @@
                             </svg>
                         </a>
                     </li>
-                    <li class="breadcrumb-item"><a href="#">Warga</a></li>
-                    <li class="breadcrumb-item active" aria-current="page">Tambah Warga</li>
+                    <li class="breadcrumb-item"><a href="#">Pelanggan</a></li>
+                    <li class="breadcrumb-item active" aria-current="page">Tambah Pelanggan</li>
                 </ol>
             </nav>
             <div class="d-flex justify-content-between w-100 flex-wrap">
                 <div class="mb-3 mb-lg-0">
-                    <h1 class="h4">Tambah Warga</h1>
-                    <p class="mb-0">Form untuk menambahkan data warga baru.</p>
+                    <h1 class="h4">Tambah Pelanggan</h1>
+                    <p class="mb-0">Form untuk menambahkan data pelanggan baru.</p>
                 </div>
                 <div>
-                    <a href="{{route('warga.index')}}" class="btn btn-primary"><i class="far fa-question-circle me-1"></i> Kembali</a>
+                    <a href="{{route('pelanggan.index')}}" class="btn btn-primary"><i class="far fa-question-circle me-1"></i> Kembali</a>
                 </div>
             </div>
         </div>
@@ -376,64 +376,59 @@
             <div class="col-12 mb-4">
                 <div class="card border-0 shadow components-section">
                     <div class="card-body">
-                        <form action="{{ route('warga.store')}}" method="POST">
+                        <form action="{{ route('pelanggan.store')}}" method="POST">
                             @csrf
                             <div class="row mb-4">
                                 <div class="col-lg-4 col-sm-6">
-                                    <!-- No KTP -->
+                                    <!-- First Name -->
                                     <div class="mb-3">
-                                        <label for="no_ktp" class="form-label">No. KTP</label>
-                                        <input name="no_ktp" type="text" id="no_ktp" class="form-control" value="{{ old('no_ktp') }}" required>
+                                        <label for="first_name" class="form-label">First name</label>
+                                        <input name="first_name" type="text" id="first_name" class="form-control" required>
                                     </div>
 
-                                    <!-- Nama -->
+                                    <!-- Last Name -->
                                     <div class="mb-3">
-                                        <label for="nama" class="form-label">Nama Lengkap</label>
-                                        <input name="nama" type="text" id="nama" class="form-control" value="{{ old('nama') }}" required>
+                                        <label for="last_name" class="form-label">Last name</label>
+                                        <input name="last_name" type="text" id="last_name" class="form-control" required>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-4 col-sm-6">
-                                    <!-- Jenis Kelamin -->
+                                    <!-- Birthday -->
                                     <div class="mb-3">
-                                        <label for="jenis_kelamin" class="form-label">Jenis Kelamin</label>
-                                        <select name="jenis_kelamin" id="jenis_kelamin" class="form-select">
-                                            <option value="">-- Pilih --</option>
-                                            <option value="Laki-laki" {{ old('jenis_kelamin') == 'Laki-laki' ? 'selected' : '' }}>Laki-laki</option>
-                                            <option value="Perempuan" {{ old('jenis_kelamin') == 'Perempuan' ? 'selected' : '' }}>Perempuan</option>
-                                        </select>
+                                        <label for="birthday" class="form-label">Birthday</label>
+                                        <input name="birthday" type="date" id="birthday" class="form-control">
                                     </div>
 
-                                    <!-- Agama -->
+                                    <!-- Gender -->
                                     <div class="mb-3">
-                                        <label for="agama" class="form-label">Agama</label>
-                                        <input name="agama" type="text" id="agama" class="form-control" value="{{ old('agama') }}">
+                                        <label for="gender" class="form-label">Gender</label>
+                                        <select name="gender" id="gender" class="form-select">
+                                            <option value="">-- Pilih --</option>
+                                            <option value="Male">Male</option>
+                                            <option value="Female">Female</option>
+                                        </select>
                                     </div>
                                 </div>
 
                                 <div class="col-lg-4 col-sm-12">
-                                    <!-- Pekerjaan -->
-                                    <div class="mb-3">
-                                        <label for="pekerjaan" class="form-label">Pekerjaan</label>
-                                        <input name="pekerjaan" type="text" id="pekerjaan" class="form-control" value="{{ old('pekerjaan') }}">
-                                    </div>
-
-                                    <!-- Telepon -->
-                                    <div class="mb-3">
-                                        <label for="telp" class="form-label">No. Telepon</label>
-                                        <input name="telp" type="text" id="telp" class="form-control" value="{{ old('telp') }}">
-                                    </div>
-
                                     <!-- Email -->
                                     <div class="mb-3">
                                         <label for="email" class="form-label">Email</label>
-                                        <input name="email" type="email" id="email" class="form-control" value="{{ old('email') }}">
+                                        <input name="email" type="text" id="email" class="form-control" required>
                                     </div>
 
-                                    <!-- Tombol -->
+                                    <!-- Phone -->
+                                    <div class="mb-3">
+                                        <label for="phone" class="form-label">Phone</label>
+                                        <input name="phone" type="text" id="phone" class="form-control">
+                                    </div>
+
+                                    <!-- Buttons -->
                                     <div class="">
                                         <button type="submit" class="btn btn-primary">Simpan</button>
-                                        <a href="{{ route('warga.index') }}" class="btn btn-outline-secondary ms-2">Batal</a>
+                                        <a href="{{ route('pelanggan.index') }}"
+                                            class="btn btn-outline-secondary ms-2">Batal</a>
                                     </div>
                                 </div>
                             </div>
@@ -447,9 +442,9 @@
         <footer class="bg-white rounded shadow p-5 mb-4 mt-4">
             <div class="row">
                 <div class="col-12 col-md-4 col-xl-6 mb-4 mb-md-0">
-                    <p class="mb-0 text-center text-lg-start">© 2025-<span class="current-year"></span> <a
+                    <p class="mb-0 text-center text-lg-start">© 2019-<span class="current-year"></span> <a
                             class="text-primary fw-normal" href="https://themesberg.com"
-                            target="_blank">shopie</a></p>
+                            target="_blank">Themesberg</a></p>
                 </div>
                 <div class="col-12 col-md-8 col-xl-6 text-center text-lg-start">
                     <!-- List -->
