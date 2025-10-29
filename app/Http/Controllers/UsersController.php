@@ -71,7 +71,7 @@ class UsersController extends Controller
 
         $users->save();
 
-        return redirect()->route('users.index') ->with('update', 'Perubahan Data Berhasil!');
+        return redirect()->route('users.index') ->with('success', 'Perubahan Data Berhasil!');
     }
 
     /**
@@ -79,6 +79,9 @@ class UsersController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        $users = User::findOrFail($id);
+
+        $users->delete();
+        return redirect()->route('users.index')->with('success', 'Data berhasil dihapus');
     }
 }

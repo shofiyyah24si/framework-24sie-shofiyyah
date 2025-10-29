@@ -3,12 +3,11 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\UsersController;
+use App\Http\Controllers\WargaController;
+use App\Http\Controllers\ProductController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\MahasiswaController;
-use App\Http\Controllers\WargaController;
 
-
-Route::resource('warga', WargaController::class);
 
 Route::get('/', function () {
     return view('welcome');
@@ -45,5 +44,9 @@ Route::get('/home',[HomeController::class, 'index'])->name('home');
 Route::resource('warga', WargaController::class);
 
 Route::resource('users', UsersController::class);
+
+Route::resource('pelanggan', PelangganController::class);
+
+Route::resource('products', ProductController::class);
 
 
