@@ -7,8 +7,14 @@ use App\Http\Controllers\WargaController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\QuestionController;
 use App\Http\Controllers\MahasiswaController;
+<<<<<<< HEAD
 
 
+=======
+use App\Http\Controllers\PelangganController;
+use App\Http\Controllers\WargaController;
+
+>>>>>>> 632a3ac28853d0d623a519620a2d9961aab23728
 Route::get('/', function () {
     return view('welcome');
 });
@@ -39,7 +45,7 @@ Route::post('question/store', [QuestionController::class, 'store'])
 
 Route::get('/home',[HomeController::class, 'index'])->name('home');
 
-Route::get('/home',[HomeController::class, 'index'])->name('home');
+Route::resource('pelanggan', PelangganController::class);
 
 Route::resource('warga', WargaController::class);
 
