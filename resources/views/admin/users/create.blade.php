@@ -59,6 +59,16 @@
                                 class="form-control" required>
                         </div>
 
+                        <div class="mb-3">
+                            <label for="role" class="form-label">role</label>
+                            <select id="role" name="role" class="form-select">
+                                <option value="">-- Pilih --</option>
+                                <option value="Admin">Admin</option>
+                                <option value="Pelanggan">Pelanggan</option>
+                                <option value="Mitra">Mitra</option>
+                            </select>
+                        </div>
+
                         <button type="submit" class="btn btn-primary">Simpan</button>
                         <a href="{{ route('users.index') }}" class="btn btn-outline-secondary ms-2">Batal</a>
                     </form>

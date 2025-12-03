@@ -66,12 +66,7 @@
                                                     </svg>
                                                     Edit
                                                 </a>
-<<<<<<< HEAD
                                                 <form action="{{ route('users.destroy', $item->id) }}" method="POST" style="display:inline">
-=======
-                                                <form action="{{ route('users.destroy', $item->id) }}"
-                                                    method="POST" style="display:inline">
->>>>>>> 632a3ac28853d0d623a519620a2d9961aab23728
                                                     @csrf
                                                     @method('DELETE')
                                                     <button type="submit" class="btn btn-danger btn-sm">

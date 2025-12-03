@@ -1,10 +1,6 @@
 @extends('layouts.admin.app')
 
-<<<<<<< HEAD
 @section('title', 'Edit Users')
-=======
-@section('title', 'Edit User')
->>>>>>> 632a3ac28853d0d623a519620a2d9961aab23728
 
 @section('content')
     <div class="py-4">
